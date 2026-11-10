@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#0066FF">
   <meta name="description" content="차차차 (Cha-Cha-Cha) — 여러 번 놀아도, 정산은 한 번에! N차 모임 정산을 단 한 번의 송금으로 퉁쳐주는 스마트 모임 정산 웹앱">
   <title>차차차 (Cha-Cha-Cha) — 꼬인 정산을 한 번에 퉁치다</title>
@@ -13,17 +11,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&family=Outfit:wght@700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
 
   <!-- Core Web App Stylesheet -->
   <link rel="stylesheet" href="chachacha.css">
-
-  <!-- Kakao JavaScript SDK for Direct Messaging API Integration -->
-  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"></script>
 </head>
-
 <body>
 
   <!-- Responsive Mobile Web App Viewport (100% Mobile Viewport, No Hardware Mockup) -->
@@ -34,52 +26,50 @@
            SCREEN 0: Splash & Entry Screen (Prominent Branding Only)
            ================================================================= -->
       <section class="app-screen screen-splash active" data-screen="0" aria-label="차차차 시작 화면">
+        <!-- Top Center Symmetrical Badge -->
+        <header class="splash-header-minimal">
+          <div class="splash-badge-online">
+            <span>✨ 스마트 퉁치기</span>
+          </div>
+        </header>
+
         <!-- Central Branding Elements with Generous Vertical Spacing -->
         <div class="splash-hero-center">
-          <!-- Stylized Rounded-Square Blue App Icon (Doubled Size 216px) -->
+          <!-- Stylized Rounded-Square Blue App Icon -->
           <div class="brand-icon-large" aria-hidden="true">
-            <svg width="216" height="216" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="108" height="108" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="appIconGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#0066FF" />
-                  <stop offset="100%" stop-color="#0047BA" />
+                  <stop offset="0%" stop-color="#0066FF"/>
+                  <stop offset="100%" stop-color="#0047BA"/>
                 </linearGradient>
                 <filter id="wonBadgeGlow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feDropShadow dx="0" dy="2.5" stdDeviation="2" flood-color="#000000" flood-opacity="0.25" />
+                  <feDropShadow dx="0" dy="2.5" stdDeviation="2" flood-color="#000000" flood-opacity="0.25"/>
                 </filter>
               </defs>
-
+              
               <!-- Rounded Square Blue App Icon -->
-              <rect width="100" height="100" rx="26" fill="url(#appIconGrad)" />
-              <rect width="98" height="98" x="1" y="1" rx="25" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5" />
+              <rect width="100" height="100" rx="26" fill="url(#appIconGrad)"/>
+              <rect width="98" height="98" x="1" y="1" rx="25" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5"/>
 
               <!-- Curved White Arrows indicating continuous circulation/settlement -->
-              <path d="M 21 44 A 32 32 0 0 1 73 20" fill="none" stroke="#FFFFFF" stroke-width="3.2"
-                stroke-linecap="round" stroke-opacity="0.95" />
-              <polygon points="76,16 83,23 74,26" fill="#FFFFFF" />
+              <path d="M 21 44 A 32 32 0 0 1 73 20" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-opacity="0.95"/>
+              <polygon points="76,16 83,23 74,26" fill="#FFFFFF"/>
 
-              <path d="M 79 56 A 32 32 0 0 1 27 80" fill="none" stroke="#FFFFFF" stroke-width="3.2"
-                stroke-linecap="round" stroke-opacity="0.95" />
-              <polygon points="24,84 17,77 26,74" fill="#FFFFFF" />
+              <path d="M 79 56 A 32 32 0 0 1 27 80" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-opacity="0.95"/>
+              <polygon points="24,84 17,77 26,74" fill="#FFFFFF"/>
 
               <!-- White Receipt Graphic in Center -->
-              <path
-                d="M 31 23 H 69 C 71.2 23 73 24.8 73 27 V 71 L 69 68 L 65 71 L 61 68 L 57 71 L 53 68 L 49 71 L 45 68 L 41 71 L 37 68 L 33 71 L 27 67 V 27 C 27 24.8 28.8 23 31 23 Z"
-                fill="#FFFFFF" />
+              <path d="M 31 23 H 69 C 71.2 23 73 24.8 73 27 V 71 L 69 68 L 65 71 L 61 68 L 57 71 L 53 68 L 49 71 L 45 68 L 41 71 L 37 68 L 33 71 L 27 67 V 27 C 27 24.8 28.8 23 31 23 Z" fill="#FFFFFF"/>
 
               <!-- Receipt text item lines -->
-              <line x1="36" y1="33" x2="58" y2="33" stroke="#0066FF" stroke-width="2.5" stroke-linecap="round"
-                stroke-opacity="0.55" />
-              <line x1="36" y1="40" x2="52" y2="40" stroke="#0066FF" stroke-width="2.5" stroke-linecap="round"
-                stroke-opacity="0.55" />
-              <line x1="36" y1="47" x2="45" y2="47" stroke="#0066FF" stroke-width="2.5" stroke-linecap="round"
-                stroke-opacity="0.55" />
+              <line x1="36" y1="33" x2="58" y2="33" stroke="#0066FF" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.55"/>
+              <line x1="36" y1="40" x2="52" y2="40" stroke="#0066FF" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.55"/>
+              <line x1="36" y1="47" x2="45" y2="47" stroke="#0066FF" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.55"/>
 
               <!-- Circular Won Currency Symbol (₩) Overlapping Receipt -->
-              <circle cx="63" cy="57" r="14" fill="#0066FF" stroke="#FFFFFF" stroke-width="2.8"
-                filter="url(#wonBadgeGlow)" />
-              <text x="63" y="63" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-weight="900"
-                font-size="15" fill="#FFFFFF" text-anchor="middle">₩</text>
+              <circle cx="63" cy="57" r="14" fill="#0066FF" stroke="#FFFFFF" stroke-width="2.8" filter="url(#wonBadgeGlow)"/>
+              <text x="63" y="63" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#FFFFFF" text-anchor="middle">₩</text>
             </svg>
           </div>
 
@@ -88,7 +78,7 @@
             <h1 class="splash-brand-title">차차차</h1>
             <div class="splash-tagline-badge">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z" />
+                <path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/>
               </svg>
               <span>여러 번 놀아도, 정산은 한 번에!</span>
             </div>
@@ -99,9 +89,7 @@
         <div class="splash-bottom-stack">
           <button type="button" class="btn-primary-action" onclick="window.chaChaApp.startNew()">
             <span>새 모임 정산 시작하기</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
         </div>
       </section>
@@ -113,9 +101,7 @@
         <header class="app-topbar">
           <div class="topbar-left">
             <button type="button" class="btn-nav-back" onclick="window.chaChaApp.goToScreen(0)" aria-label="이전 화면으로 이동">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
             </button>
             <h2 class="topbar-title">모임 & 멤버 설정</h2>
           </div>
@@ -138,19 +124,14 @@
               <label class="section-label" for="inputGroupName">모임 이름</label>
               <span class="section-subtext">언제 누구와 만났나요?</span>
             </div>
-            <input type="text" id="inputGroupName" class="text-input-styled" placeholder="예: 주말 부산 여행 모임 🌊"
-              onchange="window.chaChaApp.updateGroupName(this.value)">
+            <input type="text" id="inputGroupName" class="text-input-styled" placeholder="예: 주말 부산 여행 모임 🌊" onchange="window.chaChaApp.updateGroupName(this.value)">
           </div>
 
           <!-- Members Card -->
           <div class="form-section-card">
-            <div class="section-label-header">
-              <span class="section-label section-label-single-line">참여자 이름 (최소 2명)</span>
-              <p class="section-subtext-helper"><svg class="crown-svg is-active" width="14" height="14"
-                  viewBox="0 0 24 24" fill="#0066FF" aria-hidden="true"
-                  style="display:inline-block; vertical-align:-1.5px; margin-right:4px;">
-                  <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1v-1h14v1z" />
-                </svg>왕관 아이콘을 눌러 총무를 지정해 주세요</p>
+            <div class="section-label-row">
+              <span class="section-label">참여자 이름 (최소 2명)</span>
+              <span class="section-subtext">왕관(👑) 아이콘을 눌러 총무를 지정해주세요</span>
             </div>
 
             <div class="member-input-row">
@@ -164,7 +145,7 @@
 
             <div class="treasurer-notice-strip warning" id="treasurerNoticeStrip">
               <span class="notice-icon">⚠️</span>
-              <span class="notice-text">총무가 아직 지정되지 않았습니다. 멤버 옆 <strong>[총무 지정]</strong> 버튼을 눌러주세요.</span>
+              <span class="notice-text">총무가 아직 지정되지 않았습니다. 멤버 옆 <strong>[👑 총무 지정]</strong> 버튼을 눌러주세요.</span>
             </div>
           </div>
         </div>
@@ -172,9 +153,7 @@
         <div class="sticky-bottom-bar">
           <button type="button" class="btn-primary-action" onclick="window.chaChaApp.createRoomLink()">
             <span>🔗 모임 공유 링크 생성하기</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
         </div>
       </section>
@@ -186,9 +165,7 @@
         <header class="app-topbar">
           <div class="topbar-left">
             <button type="button" class="btn-nav-back" onclick="window.chaChaApp.goToScreen(1)" aria-label="이전 화면으로 이동">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
             </button>
             <h2 class="topbar-title">함께 참석 차수 체크</h2>
           </div>
@@ -227,10 +204,7 @@
 
           <!-- Prominent Large + 차수 추가하기 Button -->
           <button type="button" class="btn-append-round" onclick="window.chaChaApp.appendRound()">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <line x1="12" y1="5" x2="12" y2="19" />
-              <line x1="5" y1="12" x2="19" y2="12" />
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             <span>+ 차수 추가하기</span>
           </button>
         </div>
@@ -238,9 +212,7 @@
         <div class="sticky-bottom-bar">
           <button type="button" class="btn-primary-action" onclick="window.chaChaApp.goToScreen(3)">
             <span>정산 결과 확인하기</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
         </div>
       </section>
@@ -252,14 +224,11 @@
         <header class="app-topbar">
           <div class="topbar-left">
             <button type="button" class="btn-nav-back" onclick="window.chaChaApp.goToScreen(2)" aria-label="이전 화면으로 이동">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
             </button>
             <h2 class="topbar-title">실시간 정산 결과</h2>
           </div>
-          <span class="topbar-step-pill"
-            style="background: var(--primary-light); color: var(--primary); font-weight: 700;">정산 완료 ✨</span>
+          <span class="topbar-step-pill" style="background: var(--primary-light); color: var(--primary); font-weight: 700;">정산 완료 ✨</span>
         </header>
 
         <div class="step-progress-track">
@@ -276,7 +245,11 @@
           <!-- Highlighted Minimizer Card -->
           <div class="minimizer-result-card">
             <div class="result-card-badge-row">
-              <span class="savings-chip-blue" id="calcSavingsBadge">기존 8회 ➔ 4회로 송금 단축 (50% 절감)</span>
+              <span class="badge-minimizer-glow">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <span>차차차 스마트 퉁치기</span>
+              </span>
+              <span class="savings-chip-blue" id="calcSavingsBadge">기존 6회 ➔ 단 3회로 퉁침!</span>
             </div>
 
             <h3 class="result-card-heading">멤버별 맞춤 송금 안내</h3>
@@ -293,19 +266,12 @@
 
             <!-- Immediate Sharing Actions Directly Below Personal Card -->
             <div class="immediate-share-block">
-              <button type="button" class="btn-share-kakao-direct" onclick="window.chaChaApp.shareViaKakaoTalk()">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#381E1F" class="kakao-svg-icon"
-                  aria-hidden="true">
-                  <path
-                    d="M12 3c-5.52 0-10 3.58-10 8 0 2.87 1.88 5.39 4.73 6.78l-1.2 4.45c-.1.38.33.68.66.47l5.24-3.48c.19.01.38.03.57.03 5.52 0 10-3.58 10-8s-4.48-10-10-10z" />
-                </svg>
-                <span>카카오톡으로 정산 결과 바로 공유하기</span>
+              <button type="button" class="btn-share-immediate" onclick="window.chaChaApp.copyKakaoTalkShare()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-5.5 0-10 3.58-10 8 0 2.87 1.88 5.39 4.73 6.78l-1.2 4.45c-.1.38.33.68.66.47l5.24-3.48c.19.01.38.03.57.03 5.5 0 10-3.58 10-8s-4.5-10-10-10z"/></svg>
+                <span>카톡 정산톡 복사</span>
               </button>
               <button type="button" class="btn-share-immediate" onclick="window.chaChaApp.copyWebLink()">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                </svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
                 <span>모임 링크 복사</span>
               </button>
             </div>
@@ -325,10 +291,7 @@
 
         <div class="sticky-bottom-bar">
           <button type="button" class="btn-secondary-action" onclick="window.chaChaApp.goToScreen(2)">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 20h9" />
-              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             <span>차수 내역 수정하기</span>
           </button>
           <button type="button" class="btn-primary-action" onclick="window.chaChaApp.goToScreen(0)">
@@ -343,5 +306,4 @@
   <!-- Interactive JavaScript Engine -->
   <script src="chachacha.js"></script>
 </body>
-
 </html>
