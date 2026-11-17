@@ -322,20 +322,46 @@
           </section>
         </div>
 
-        <!-- Sidebar Bottom Footer / Export Options -->
-        <footer class="sidebar-footer">
-          <button class="btn btn-outline" id="btn-export-markdown" title="마크다운 문서로 내보내기">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-            <span>명세서 (.md)</span>
-          </button>
-          <button class="btn btn-outline" id="btn-export-json" title="JSON 데이터 내보내기">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-            <span>데이터 (.json)</span>
-          </button>
-          <button class="btn btn-outline" id="btn-save-annotated-image" title="마킹 핀이 합성된 이미지 다운로드">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-            <span>마킹 이미지</span>
-          </button>
+        <!-- Sidebar Bottom Footer: Direct AI Tool Quick-Launcher -->
+        <footer class="sidebar-footer direct-ai-launcher">
+          <div class="ai-launcher-header">
+            <span class="ai-launcher-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-blue);">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              <span>AI 툴로 바로 이동 (Open in AI Editor)</span>
+            </span>
+            <span class="ai-launcher-badge">복사 &amp; 이동</span>
+          </div>
+
+          <div class="ai-launcher-grid">
+            <button class="btn-ai-tool btn-ai-gemini" data-url="https://gemini.google.com" data-tool="Gemini" title="Gemini 열기 &amp; 프롬프트 자동 복사">
+              <span class="ai-tool-icon">✨</span>
+              <span class="ai-tool-name">Gemini</span>
+              <svg class="ai-tool-ext-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+
+            <button class="btn-ai-tool btn-ai-chatgpt" data-url="https://chatgpt.com" data-tool="ChatGPT" title="ChatGPT 열기 &amp; 프롬프트 자동 복사">
+              <span class="ai-tool-icon">💬</span>
+              <span class="ai-tool-name">ChatGPT</span>
+              <svg class="ai-tool-ext-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+
+            <button class="btn-ai-tool btn-ai-midjourney" data-url="https://www.midjourney.com" data-tool="Midjourney / Flux" title="Midjourney / Flux 열기 &amp; 프롬프트 자동 복사">
+              <span class="ai-tool-icon">🎨</span>
+              <span class="ai-tool-name">Midjourney</span>
+              <svg class="ai-tool-ext-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+          </div>
+
+          <div class="export-utility-bar">
+            <span class="export-utility-label">명세서/데이터:</span>
+            <button class="btn-subtle-sm" id="btn-export-markdown" title="마크다운 문서로 내보내기">📄 .md</button>
+            <button class="btn-subtle-sm" id="btn-export-json" title="JSON 데이터 내보내기">💾 .json</button>
+            <button class="btn-subtle-sm" id="btn-save-annotated-image" title="마킹 핀이 합성된 이미지 다운로드">🖼️ 마킹 이미지</button>
+          </div>
         </footer>
       </aside>
     </main>
